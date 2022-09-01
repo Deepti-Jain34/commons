@@ -63,6 +63,9 @@ fi
 echo "Check ability to create a kubernetes deployment in ${CLUSTER_NAMESPACE} using kubectl CLI"
 kubectl auth can-i create deployment --namespace ${CLUSTER_NAMESPACE}
 
+echo "Creating faust-config configmap in ${CLUSTER_NAMESPACE} using kubectl CLI"
+kubectl apply -f TIP-alerting-system/tip_config_map.yaml
+
 #Check cluster availability
 echo "=========================================================="
 echo "CHECKING CLUSTER readiness and namespace existence"
