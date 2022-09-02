@@ -151,7 +151,8 @@ spec:
         envFrom:
         - configMapRef:
            name: tip-config-map
-        
+        - secretRef:
+           name: tip-secret
 ---
 apiVersion: v1
 kind: Service
