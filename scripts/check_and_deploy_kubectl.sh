@@ -148,6 +148,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: %s
+        envFrom:
+        - configMapRef:
+           name: tip-config-map
+        
 ---
 apiVersion: v1
 kind: Service
